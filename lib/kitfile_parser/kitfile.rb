@@ -1,5 +1,9 @@
+require 'kitfile_parser/kitfile/node'
+
 module KitfileParser
   class Kitfile
+    attr_reader :nodes
+    
     def initialize
       @nodes = {}
       yield self if block_given?
