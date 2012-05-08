@@ -3,7 +3,11 @@ module KitfileParser
     class Node
       DEFAULT_INITIAL_CONCURRENCY = 0
 
-      attr_reader :platform, :name, :command, :initial_concurrency, :routes
+      attr_reader :platform
+      attr_reader :name
+      attr_reader :command
+      attr_reader :initial_concurrency
+      attr_reader :routes
       
       def initialize(platform, name, command, initial_concurrency = nil)
         @platform = platform
