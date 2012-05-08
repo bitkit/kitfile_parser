@@ -10,10 +10,10 @@ module KitfileParser
       attr_reader :routes
       
       def initialize(platform, name, command, initial_concurrency = nil)
-        @platform = platform
-        @name = name
+        @platform = platform.to_sym
+        @name = name.to_sym
         @command = command
-        @initial_concurrency = initial_concurrency || DEFAULT_INITIAL_CONCURRENCY
+        @initial_concurrency = (initial_concurrency || DEFAULT_INITIAL_CONCURRENCY).to_i
         @routes = []
       end
 
