@@ -19,5 +19,5 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'minitest-reporters'
   s.add_development_dependency 'bueller'
   s.add_development_dependency 'fakefs'
-  s.add_dependency 'yard'
+  s.add_development_dependency 'yard'
 end

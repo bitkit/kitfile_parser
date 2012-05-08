@@ -2,7 +2,6 @@ PATH
   remote: .
   specs:
     kitfile_parser (0.0.0)
-      yard
 
 GEM
   remote: http://rubygems.org/
@@ -12,11 +11,13 @@ GEM
       bundler (~> 1.1.0)
       git (>= 1.2.5)
       rake
+    builder (3.0.0)
     fakefs (0.4.0)
     git (1.2.5)
     minitest (2.12.1)
-    minitest-reporters (0.6.0)
+    minitest-reporters (0.7.0)
       ansi
+      builder
       minitest (~> 2.0)
       ruby-progressbar
     rake (0.9.2.2)
@@ -32,3 +33,4 @@ DEPENDENCIES
   kitfile_parser!
   minitest
   minitest-reporters
+  yard
