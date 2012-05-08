@@ -5,12 +5,13 @@ describe KitfileParser do
     before do
       FileUtils.mkpath(File.expand_path("."))
       File.open File.expand_path("./Kitfile"), 'w' do |f|
-        f.write <<eof
+        f.write <<-EOS
+# This is a comment
 heroku/web(3): bundle exec rackup config.ru
-  - myapp.com/*
+  - myapp.com/* # gosh i really love this route
 joyent/worker: node worker.js
 elastic_mapreduce/indexer: python indexer.py
-eof
+EOS
       end
     end
     it 'gets parsed properly' do
